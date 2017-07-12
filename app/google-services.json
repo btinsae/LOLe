@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "4897045257",
+    "firebase_url": "https://maoo-f8005.firebaseio.com",
+    "project_id": "maoo-f8005",
+    "storage_bucket": "maoo-f8005.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:4897045257:android:bed2d267ae8f1428",
+        "android_client_info": {
+          "package_name": "com.irolitech.maoo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "4897045257-0tf22p2ooe8ftapr56fq2osvq3pghsga.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.irolitech.maoo",
+            "certificate_hash": "d41d753345c869dcde277ef29cfa3aeed3da11ea"
+          }
+        },
+        {
+          "client_id": "4897045257-bm7o2ovh9klu69f5kha6aifdguv5ku5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbXPQD4eqIWDK57154DXjvSFskO2jWNWw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "4897045257-bm7o2ovh9klu69f5kha6aifdguv5ku5n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
