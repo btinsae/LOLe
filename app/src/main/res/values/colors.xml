@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <!--<color name="colorPrimary">#F44336</color>-->
+    <!--<color name="colorPrimaryDark">#D32F2F</color>-->
+    <!--<color name="primary_light">#FFCDD2</color>-->
+    <!--<color name="colorAccent">#FFEB3B</color>-->
+
+    <color name="colorPrimary">#FFF</color>
+    <color name="colorPrimaryDark">#F5F5F5</color>
+    <color name="primary_light">#FAFAFA</color>
+    <color name="card_color">#FFF</color>
+    <color name="body_color">#eee</color>
+    <color name="colorAccent">#00DD01</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="dark_white">#f5f5f5</color>
+    <color name="light_white">#e0e0e0</color>
+    <color name="tab_unselected_color">#EF9A9A</color>
 </resources>
+
+
+
+

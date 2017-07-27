@@ -1,4 +1,4 @@
-package com.irolitech.maoo;
+package com.irolitech.maoo.activities;
 
 import android.app.Application;
 

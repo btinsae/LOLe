@@ -1,4 +1,4 @@
-package com.irolitech.maoo;
+package com.irolitech.maoo.activities;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -27,6 +27,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.irolitech.maoo.R;
 
 public class LoginActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
