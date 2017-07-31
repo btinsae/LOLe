@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.facebook.login.LoginManager;
 import com.irolitech.maoo.R;
@@ -38,13 +39,13 @@ public class MainActivity extends AppCompatActivity implements Sent.OnFragmentIn
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                    Toast.makeText(MainActivity.this,"HOME ",Toast.LENGTH_LONG).show();
                     return true;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
+                    Toast.makeText(MainActivity.this,"HOME ",Toast.LENGTH_LONG).show();
                     return true;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
+                    Toast.makeText(MainActivity.this,"HOME ",Toast.LENGTH_LONG).show();
                     return true;
             }
             return false;
