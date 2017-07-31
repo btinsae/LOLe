@@ -1,14 +1,18 @@
 package com.irolitech.maoo.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.irolitech.maoo.R;
+import com.irolitech.maoo.activities.OrderProgress;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -73,6 +77,19 @@ public class Sent extends Fragment {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
         }
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        Button button= (Button) view.findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), OrderProgress.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
