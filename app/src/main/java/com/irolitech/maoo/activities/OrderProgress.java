@@ -2,6 +2,7 @@ package com.irolitech.maoo.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetBehavior;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -47,8 +48,8 @@ public class OrderProgress extends AppCompatActivity implements OnMapReadyCallba
             }
         });
 
-        RelativeLayout bottomSheetLayout= (RelativeLayout) findViewById(R.id.bottom_sheet);
-        BottomSheetBehavior bottomSheetBehavior=BottomSheetBehavior.from(bottomSheetLayout);
+       RelativeLayout bottomSheetLayout= (RelativeLayout) findViewById(R.id.bottom_sheet);
+        BottomSheetBehavior bottomSheetBehavior=BottomSheetBehavior.from( bottomSheetLayout);
         bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
 
     }
