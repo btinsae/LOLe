@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:layout_marginTop="8dp"
+
+    android:layout_marginRight="16dp">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/service_provider_thumbnail"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/service_provider_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_toEndOf="@id/service_provider_thumbnail"
+        android:layout_toRightOf="@id/service_provider_thumbnail"
+        android:text="Birhane"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/service_provider_name"
+        android:layout_alignStart="@id/service_provider_name"
+        android:layout_below="@id/service_provider_name"
+        android:rating="5"
+        android:textColor="@color/secondary_text" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/rating_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/service_provider_name"
+        android:layout_toEndOf="@id/ratingBar"
+        android:layout_toRightOf="@id/ratingBar"
+        android:text="(102)"
+        android:textColor="@color/secondary_text" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/delivery_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/ratingBar"
+        android:layout_alignStart="@id/ratingBar"
+        android:layout_below="@id/rating_count"
+        android:text="Free delivery"
+        android:textColor="@color/secondary_text"
+        android:textSize="10sp" />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/minimum_price"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/rating_count"
+        android:layout_toEndOf="@id/delivery_fee"
+        android:layout_toRightOf="@id/delivery_fee"
+        android:text=" Min $10"
+        android:textColor="@color/secondary_text"
+        android:textSize="10sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/service_provider_special_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/delivery_fee"
+        android:layout_alignStart="@id/delivery_fee"
+        android:layout_below="@id/delivery_fee"
+        android:text="Lorem ipsum dolor sit amet"
+        android:textColor="@color/secondary_text" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/average_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/service_provider_name"
+        android:text="$25"
+        android:textColor="@color/secondary_text" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/eta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/average_price"
+        android:text="15-30 min"
+        android:textColor="@color/secondary_text" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/distance_between"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/eta"
+        android:text="0.2mi"
+        android:textColor="@color/secondary_text" />
+
+</RelativeLayout>

@@ -1,5 +1,7 @@
 package com.irolitech.maoo.activities;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,8 +14,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -22,10 +26,12 @@ import android.widget.Toast;
 import com.facebook.login.LoginManager;
 import com.irolitech.maoo.R;
 import com.irolitech.maoo.adapters.ViewPagerAdapter;
+import com.irolitech.maoo.fragments.Food;
 import com.irolitech.maoo.fragments.Incoming;
+import com.irolitech.maoo.fragments.Laundry;
 import com.irolitech.maoo.fragments.Sent;
 
-public class MainActivity extends AppCompatActivity implements Sent.OnFragmentInteractionListener, Incoming.OnFragmentInteractionListener,
+public class MainActivity extends AppCompatActivity implements Food.OnFragmentInteractionListener, Laundry.OnFragmentInteractionListener,
         NavigationView.OnNavigationItemSelectedListener {
 
     private TextView mTextMessage;
@@ -55,7 +61,18 @@ public class MainActivity extends AppCompatActivity implements Sent.OnFragmentIn
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        return super.onCreateOptionsMenu(menu);
+        // Inflate the options menu from XML
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+
+        // Get the SearchView and set the searchable configuration
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
+        // Assumes current activity is the searchable activity
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        searchView.setIconifiedByDefault(false); // Do not iconify the widget; expand it by default
+
+        return true;
     }
 
     @Override
@@ -73,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements Sent.OnFragmentIn
 //            getLoginScreen();
 //        }
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Maoo");
         setSupportActionBar(toolbar);
 
 
@@ -101,8 +119,8 @@ public class MainActivity extends AppCompatActivity implements Sent.OnFragmentIn
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new Sent(), "Sent");
-        adapter.addFragment(new Incoming(), "Incoming");
+        adapter.addFragment(new Food(), "Food");
+        adapter.addFragment(new Laundry(), "Laundry");
         viewPager.setAdapter(adapter);
     }
 

@@ -18,6 +18,7 @@
     <color name="dark_white">#f5f5f5</color>
     <color name="light_white">#e0e0e0</color>
     <color name="tab_unselected_color">#EF9A9A</color>
+    <color name="bottom_navigation_bg">#00c489</color>
 </resources>
 
 

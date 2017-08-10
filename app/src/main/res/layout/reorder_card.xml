@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/reorder_card_view"
+    android:layout_width="110dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="10dp">
+
+
+    <ImageView
+        android:id="@+id/reorder_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/pizza" />
+
+    <TextView
+        android:id="@+id/reorder_service_provider_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reorder_thumbnail"
+        android:padding="5dp"
+        android:text="Hard Rock Bar  Restaurant "
+        android:textColor="@color/primary_text"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/reorder_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reorder_service_provider_name"
+        android:padding="5dp"
+        android:text="Lorem ipsum dolor sit amet," />
+
+    <ImageView
+        android:id="@+id/rating"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_below="@id/reorder_desc"
+        android:padding="5dp"
+        android:src="@android:drawable/btn_star" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/eat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/reorder_desc"
+        android:padding="5dp"
+        android:text="54 min"
+        android:textSize="12sp" />
+
+
+</RelativeLayout>

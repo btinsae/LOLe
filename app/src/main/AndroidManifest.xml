@@ -27,6 +27,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name=".activities.LoginActivity" />
 
@@ -88,6 +89,8 @@
         <activity
             android:name=".activities.MapsActivity"
             android:label="@string/title_activity_maps"></activity>
+        <meta-data android:name="android.app.default_searchable"
+            android:value=".SearchActivity" />
     </application>
 
 </manifest>
