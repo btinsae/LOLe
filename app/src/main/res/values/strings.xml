@@ -116,5 +116,6 @@
     <string name="tailoring">Tailoring</string>
     <string name="dry_clean">Dry Clean</string>
     <string name="pick_up_time">Pick up time</string>
+    <string name="pick_up_hour">Pick up hour</string>
 
 </resources>

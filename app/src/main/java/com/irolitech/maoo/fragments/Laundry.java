@@ -1,6 +1,7 @@
 package com.irolitech.maoo.fragments;
 
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TimePicker;
+import android.widget.Toast;
 
 import com.irolitech.maoo.R;
 
@@ -29,13 +32,14 @@ public class Laundry extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    EditText editText;
+    EditText datePicker;
     Calendar myCalendar = Calendar.getInstance();
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+    private EditText timePickerEditText;
 
     public Laundry() {
         // Required empty public constructor
@@ -85,11 +89,28 @@ public class Laundry extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-         editText= (EditText) view.findViewById(R.id.pick_up_time);
+        datePicker = (EditText) view.findViewById(R.id.pick_up_time_date);
+        timePickerEditText = (EditText) view.findViewById(R.id.pick_up_time_hour_min);
 
+        final TimePickerDialog.OnTimeSetListener time = new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker timePicker, int i, int i1) {
 
+            }
+        };
+       timePickerEditText.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               new TimePickerDialog.OnTimeSetListener() {
+                   @Override
+                   public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                       timePickerEditText.setText(i+" "+i1);
+                   }
+               };
+           }
+       });
 
-       final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+        final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear,
@@ -98,12 +119,13 @@ public class Laundry extends Fragment {
                 myCalendar.set(Calendar.YEAR, year);
                 myCalendar.set(Calendar.MONTH, monthOfYear);
                 myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-
+                datePicker.setText(monthOfYear + " " + dayOfMonth + "," + year);
+                Toast.makeText(getActivity(), year + " " + monthOfYear + " " + dayOfMonth, Toast.LENGTH_LONG).show();
             }
 
         };
 
-        editText.setOnClickListener(new View.OnClickListener() {
+        datePicker.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -111,6 +133,7 @@ public class Laundry extends Fragment {
                 new DatePickerDialog(getActivity(), date, myCalendar
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                         myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+                //editText.setText(myCalendar.);
             }
         });
 

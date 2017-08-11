@@ -113,12 +113,19 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/pick_up_time"
+                android:id="@+id/pick_up_time_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:hint="@string/pick_up_time"
                 android:inputType="datetime" />
+            <EditText
+                android:id="@+id/pick_up_time_hour_min"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:inputType="time"
+                android:hint="@string/pick_up_hour"/>
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
