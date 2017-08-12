@@ -32,7 +32,7 @@ public class FoodRVAdapter extends RecyclerView.Adapter<FoodRVAdapter.FoodRVhold
 
     @Override
     public int getItemCount() {
-        return 1;
+        return 3;
     }
 
     public class FoodRVholder extends RecyclerView.ViewHolder {

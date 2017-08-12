@@ -112,5 +112,9 @@
     <string name="action_search">Search</string>
     <string name="title_favorite">Favorite</string>
     <string name="title_history">History</string>
+    <string name="wash_fold"><![CDATA[Wash & Fold]]></string>
+    <string name="tailoring">Tailoring</string>
+    <string name="dry_clean">Dry Clean</string>
+    <string name="pick_up_time">Pick up time</string>
 
 </resources>
