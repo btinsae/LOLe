@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.irolitech.maoo.R;
 
 import java.util.Calendar;
+import java.util.HashMap;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -37,9 +38,10 @@ public class Laundry extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    private String am_pm;
     private OnFragmentInteractionListener mListener;
     private EditText timePickerEditText;
+    private TimePickerDialog mTimePicker;
 
     public Laundry() {
         // Required empty public constructor
@@ -92,24 +94,28 @@ public class Laundry extends Fragment {
         datePicker = (EditText) view.findViewById(R.id.pick_up_time_date);
         timePickerEditText = (EditText) view.findViewById(R.id.pick_up_time_hour_min);
 
-        final TimePickerDialog.OnTimeSetListener time = new TimePickerDialog.OnTimeSetListener() {
-            @Override
-            public void onTimeSet(TimePicker timePicker, int i, int i1) {
 
+        final TimePickerDialog.OnTimeSetListener time = new TimePickerDialog.OnTimeSetListener() {
+
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                myCalendar.set(Calendar.HOUR, hourOfDay);
+                myCalendar.set(Calendar.MINUTE, minute);
             }
         };
-       timePickerEditText.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               new TimePickerDialog.OnTimeSetListener() {
-                   @Override
-                   public void onTimeSet(TimePicker timePicker, int i, int i1) {
-                       timePickerEditText.setText(i+" "+i1);
-                   }
-               };
-           }
-       });
-
+        timePickerEditText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mTimePicker = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                        am_pm = (myCalendar.get(Calendar.AM_PM) == Calendar.SUNDAY) ? "AM" : "PM";
+                        timePickerEditText.setText(hourOfDay + ":" + minute + " " +am_pm);
+                    }
+                }, myCalendar.get(Calendar.HOUR), myCalendar.get(Calendar.MINUTE), true);
+                mTimePicker.show();
+            }
+        });
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
             @Override
@@ -119,19 +125,23 @@ public class Laundry extends Fragment {
                 myCalendar.set(Calendar.YEAR, year);
                 myCalendar.set(Calendar.MONTH, monthOfYear);
                 myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                datePicker.setText(monthOfYear + " " + dayOfMonth + "," + year);
-                Toast.makeText(getActivity(), year + " " + monthOfYear + " " + dayOfMonth, Toast.LENGTH_LONG).show();
+                datePicker.setText(getMonthName(monthOfYear) + " " + dayOfMonth + ", " + year);
+                //Toast.makeText(getActivity(), year + " " + monthOfYear + " " + dayOfMonth, Toast.LENGTH_LONG).show();
             }
 
         };
 
-        datePicker.setOnClickListener(new View.OnClickListener() {
+
+        datePicker.setOnClickListener(new View.OnClickListener()
+
+        {
 
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                new DatePickerDialog(getActivity(), date, myCalendar
-                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                new DatePickerDialog(getActivity(), date,
+                        myCalendar.get(Calendar.YEAR),
+                        myCalendar.get(Calendar.MONTH),
                         myCalendar.get(Calendar.DAY_OF_MONTH)).show();
                 //editText.setText(myCalendar.);
             }
@@ -169,5 +179,22 @@ public class Laundry extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    private String getMonthName(int month) {
+        HashMap<Integer, String> hashMap = new HashMap<>();
+        hashMap.put(0, "Jan");
+        hashMap.put(1, "Feb");
+        hashMap.put(2, "Mar");
+        hashMap.put(3, "Apr");
+        hashMap.put(4, "May");
+        hashMap.put(5, "Jun");
+        hashMap.put(6, "Jul");
+        hashMap.put(7, "Aug");
+        hashMap.put(8, "Sep");
+        hashMap.put(9, "Oct");
+        hashMap.put(10, "Nov");
+        hashMap.put(11, "Dec");
+        return hashMap.get(month);
     }
 }

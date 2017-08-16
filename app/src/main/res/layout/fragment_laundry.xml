@@ -25,14 +25,14 @@
         <android.support.v7.widget.CardView
             android:id="@+id/wash_fold"
             android:layout_width="110dp"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_margin="8dp"
             android:padding="8dp">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal|center_vertical">
 
                 <android.support.v7.widget.AppCompatImageView
                     android:id="@+id/wash_fold_image"
@@ -45,21 +45,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/wash_fold_image"
-                    android:text="@string/wash_fold" />
+                    android:text="@string/wash_fold"
+                    android:textColor="@color/primary_text" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
             android:id="@+id/dry_clean"
             android:layout_width="110dp"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_margin="8dp"
             android:padding="8dp">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal|center_vertical">
 
                 <android.support.v7.widget.AppCompatImageView
                     android:id="@+id/dry_clean_image"
@@ -72,21 +73,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/dry_clean_image"
-                    android:text="@string/dry_clean" />
+                    android:text="@string/dry_clean"
+                    android:textColor="@color/primary_text" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
 
             android:layout_width="110dp"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_margin="8dp"
             android:padding="8dp">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal|center_vertical">
 
                 <android.support.v7.widget.AppCompatImageView
                     android:id="@+id/tailoring_image"
@@ -99,21 +101,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tailoring_image"
-                    android:text="@string/tailoring" />
+                    android:text="@string/tailoring"
+                    android:textColor="@color/primary_text" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
     </LinearLayout>
 
     <android.support.v7.widget.CardView
+        android:id="@+id/pick_up_time_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/linear_layout">
+        android:layout_below="@id/linear_layout"
+        android:layout_marginTop="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="When can the cleaner can pick up your stuff?"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/pick_up_time_date"
@@ -133,5 +146,13 @@
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pick_up_time_card"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:text="Select a Cleaner"
+        android:theme="@style/MyButton"
+      />
 
 </RelativeLayout>
