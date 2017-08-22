@@ -6,25 +6,27 @@
 
     <RelativeLayout
         android:id="@+id/reorder_card_view"
-        android:layout_width="110dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content">
 
 
         <ImageView
             android:id="@+id/reorder_thumbnail"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:src="@drawable/pizza"
-            android:layout_alignParentTop="true"
+            android:layout_height="100dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/pizza" />
 
         <TextView
             android:id="@+id/reorder_service_provider_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/reorder_thumbnail"
-            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
             android:text="Hard Rock Bar  Restaurant "
             android:textColor="@color/primary_text"
             android:textSize="14sp" />
@@ -34,7 +36,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/reorder_service_provider_name"
-            android:padding="5dp"
+            android:paddingEnd="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingStart="5dp"
             android:text="Lorem ipsum dolor sit amet," />
 
         <ImageView
@@ -42,7 +47,9 @@
             android:layout_width="10dp"
             android:layout_height="10dp"
             android:layout_below="@id/reorder_desc"
-            android:padding="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:src="@android:drawable/btn_star" />
 
         <android.support.v7.widget.AppCompatTextView
@@ -52,7 +59,9 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_below="@id/reorder_desc"
-            android:padding="5dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
             android:text="54 min"
             android:textSize="12sp" />
 

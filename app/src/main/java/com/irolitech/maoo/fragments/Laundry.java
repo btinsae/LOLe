@@ -3,15 +3,18 @@ package com.irolitech.maoo.fragments;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -91,6 +94,18 @@ public class Laundry extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        CardView washFold = (CardView) view.findViewById(R.id.wash_fold);
+        washFold.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ImageView imageView= (ImageView) v.findViewById(R.id.wash_fold_image);
+                imageView.setImageResource(R.drawable.laundry_active);
+            }
+        });
+
+
+
         datePicker = (EditText) view.findViewById(R.id.pick_up_time_date);
         timePickerEditText = (EditText) view.findViewById(R.id.pick_up_time_hour_min);
 
