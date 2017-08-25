@@ -117,5 +117,6 @@
     <string name="dry_clean">Dry Clean</string>
     <string name="pick_up_time">Pick up time</string>
     <string name="pick_up_hour">Pick up hour</string>
+    <string name="title_activity_item_detail">ItemDetailActivity</string>
 
 </resources>

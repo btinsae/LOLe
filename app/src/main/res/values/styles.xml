@@ -41,6 +41,7 @@
         <item name="android:textColor">@color/tab_unselected_color</item>
         <item name="textAllCaps">false</item>
     </style>
+
     <style name="MyButton" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">@color/bottom_navigation_bg</item>
         <item name="colorButtonNormal">@color/colorAccent</item>
