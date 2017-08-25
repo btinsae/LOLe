@@ -23,6 +23,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+//import com.facebook.login.LoginManager;
 import com.facebook.login.LoginManager;
 import com.irolitech.maoo.R;
 import com.irolitech.maoo.adapters.ViewPagerAdapter;
