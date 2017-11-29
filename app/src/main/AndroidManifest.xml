@@ -12,7 +12,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:name=".activities.Maoo"
+        android:name="com.irolitech.lole.activities.Lole"
         android:allowBackup="true"
         android:icon="@drawable/logo_maoo"
         android:label="@string/app_name"
@@ -20,7 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.MainActivity"
+            android:name="com.irolitech.lole.activities.MainActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
@@ -29,7 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.LoginActivity" />
+        <activity android:name="com.irolitech.lole.activities.LoginActivity" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
@@ -52,15 +52,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.ItemDetails"
+            android:name="com.irolitech.lole.activities.ItemDetails"
             android:label="@string/title_activity_item_details"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.OrderProgress"
+            android:name="com.irolitech.lole.activities.OrderProgress"
             android:label="@string/title_activity_order_progress"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.SearchActivity"
+            android:name="com.irolitech.lole.activities.SearchActivity"
             android:label="@string/title_activity_search"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -69,7 +69,7 @@
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity" />
+                android:value="com.irolitech.lole.activities.MainActivity" />
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
@@ -87,7 +87,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".activities.MapsActivity"
+            android:name="com.irolitech.lole.activities.MapsActivity"
             android:label="@string/title_activity_maps" />
 
         <meta-data
@@ -95,7 +95,7 @@
             android:value=".SearchActivity" />
 
         <activity
-            android:name=".ItemDetailActivity"
+            android:name="com.irolitech.lole.ItemDetailActivity"
             android:label="@string/title_activity_item_detail"
             android:theme="@style/AppTheme"></activity>
     </application>

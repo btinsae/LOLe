@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="com.irolitech.maoo.fragments.Sent">
+    tools:context="com.irolitech.lole.fragments.Sent">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/sent_recycler"

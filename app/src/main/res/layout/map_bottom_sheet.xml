@@ -17,7 +17,7 @@
         app:behavior_hideable="false"
         app:behavior_peekHeight="60dp"
         app:layout_behavior="@string/bottom_sheet_behavior"
-        tools:context="com.irolitech.maoo.activities.OrderProgress">
+        tools:context="com.irolitech.lole.activities.OrderProgress">
 
         <LinearLayout
             android:id="@+id/text_views"

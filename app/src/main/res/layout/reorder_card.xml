@@ -64,7 +64,5 @@
             android:paddingRight="5dp"
             android:text="54 min"
             android:textSize="12sp" />
-
-
     </RelativeLayout>
 </android.support.v7.widget.CardView>
