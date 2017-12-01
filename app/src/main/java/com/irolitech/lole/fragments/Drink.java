@@ -3,11 +3,16 @@ package com.irolitech.lole.fragments;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.irolitech.lole.adapters.DrinkRVAdapter;
+import com.irolitech.lole.adapters.FoodRVAdapter;
 import com.irolitech.maoo.R;
 
 
@@ -33,6 +38,11 @@ public class Drink extends Fragment {
 
     public Drink() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
     }
 
     /**
@@ -67,6 +77,15 @@ public class Drink extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_drink, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        RecyclerView drinkRecyclerView = (RecyclerView) view.findViewById(R.id.drink_recycler_view);
+        drinkRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        drinkRecyclerView.setAdapter(new DrinkRVAdapter());
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event

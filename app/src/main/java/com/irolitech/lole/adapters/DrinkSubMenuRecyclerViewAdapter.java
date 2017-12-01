@@ -1,6 +1,5 @@
 package com.irolitech.lole.adapters;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +15,7 @@ public class DrinkSubMenuRecyclerViewAdapter extends RecyclerView.Adapter<DrinkS
 
     @Override
     public DrinkSubMenuRVHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.drink_item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.drink_item_card, parent, false);
         return new DrinkSubMenuRVHolder(view);
     }
 
@@ -30,8 +29,8 @@ public class DrinkSubMenuRecyclerViewAdapter extends RecyclerView.Adapter<DrinkS
         return 5;
     }
 
-    public class DrinkSubMenuRVHolder extends RecyclerView.ViewHolder{
-        public DrinkSubMenuRVHolder(View itemView) {
+    class DrinkSubMenuRVHolder extends RecyclerView.ViewHolder {
+        DrinkSubMenuRVHolder(View itemView) {
             super(itemView);
         }
     }

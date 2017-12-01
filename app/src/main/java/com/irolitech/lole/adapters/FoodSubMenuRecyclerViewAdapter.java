@@ -20,7 +20,7 @@ public class FoodSubMenuRecyclerViewAdapter extends RecyclerView.Adapter<FoodSub
     @Override
     public VerticalRVholder onCreateViewHolder(ViewGroup parent, int viewType) {
         mContext = parent.getContext();
-        View view = LayoutInflater.from(mContext).inflate(R.layout.reorder_card, parent, false);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.food_item_card, parent, false);
         return new VerticalRVholder(view);
 
     }

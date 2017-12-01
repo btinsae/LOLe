@@ -32,7 +32,7 @@ import com.irolitech.lole.fragments.Food;
 import com.irolitech.lole.fragments.Laundry;
 import com.irolitech.maoo.R;
 
-public class MainActivity extends AppCompatActivity implements Food.OnFragmentInteractionListener,Drink.OnFragmentInteractionListener, Laundry.OnFragmentInteractionListener,
+public class MainActivity extends AppCompatActivity implements Food.OnFragmentInteractionListener, Drink.OnFragmentInteractionListener, Laundry.OnFragmentInteractionListener,
         NavigationView.OnNavigationItemSelectedListener {
 
     private TextView mTextMessage;
@@ -46,13 +46,13 @@ public class MainActivity extends AppCompatActivity implements Food.OnFragmentIn
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    Toast.makeText(MainActivity.this,"HOME ",Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "HOME ", Toast.LENGTH_LONG).show();
                     return true;
                 case R.id.navigation_dashboard:
-                    Toast.makeText(MainActivity.this,"HOME ",Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "HOME ", Toast.LENGTH_LONG).show();
                     return true;
                 case R.id.navigation_notifications:
-                    Toast.makeText(MainActivity.this,"HOME ",Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "HOME ", Toast.LENGTH_LONG).show();
                     return true;
             }
             return false;
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements Food.OnFragmentIn
 //            getLoginScreen();
 //        }
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-       // toolbar.setTitle("Maoo");
+        // toolbar.setTitle("Maoo");
         setSupportActionBar(toolbar);
 
 
@@ -173,7 +173,8 @@ public class MainActivity extends AppCompatActivity implements Food.OnFragmentIn
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
-
+            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
