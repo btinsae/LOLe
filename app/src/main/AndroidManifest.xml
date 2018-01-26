@@ -29,7 +29,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.irolitech.lole.activities.LoginActivity" />
+        <activity android:name="com.irolitech.lole.activities.LoginActivity">
+
+        </activity>
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"

@@ -25,6 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/drink_image"
             android:layout_centerHorizontal="true"
+            android:textColor="@color/primary_text"
             android:text="@string/drink" />
 
         <TextView
@@ -33,6 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/drink_name"
             android:layout_alignParentBottom="true"
+
             android:layout_alignStart="@+id/drink_name"
             android:layout_below="@id/drink_name"
             android:text="$23.00" />

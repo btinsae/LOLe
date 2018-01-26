@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "4897045257-rnac26ka2g74cofb3v42f99ee1fquvv7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.irolitech.maoo",
+            "certificate_hash": "760f62c2f7d1011856b24996c3fc4f5682de8060"
+          }
+        },
+        {
           "client_id": "4897045257-0tf22p2ooe8ftapr56fq2osvq3pghsga.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
